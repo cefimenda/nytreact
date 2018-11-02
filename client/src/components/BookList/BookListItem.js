@@ -8,7 +8,7 @@ export const BookListItem = props => (
     <Container>
       <Row>
         <Col size="xs-4 sm-2">
-          <Thumbnail src={props.image || "https://placehold.it/300x300"} />
+          <Thumbnail src={props.image.replace("http://","https://") || "https://placehold.it/300x300"} />
           <button className="btn btn-outline-primary mt-2 w-100" onClick={()=>{
             if (props.saveBook){
               props.saveBook({
