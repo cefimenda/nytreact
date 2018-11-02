@@ -69,7 +69,7 @@ class Search extends Component {
               </Col>
             </Row>
             <Row>
-              <Col size="xs-12">
+              <Col other="w-100 mt-3" size="xs-12">
                 {!this.state.books.length ? (
                   <h1 className="text-center">No Books to Display</h1>
                 ) : (

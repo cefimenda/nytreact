@@ -2,8 +2,8 @@ import React from "react";
 
 // This Col component lets us size bootstrap columns with less syntax
 // e.g. <Col size="md-12"> instead of <div className="col-md-12">
-export const Col = ({ size, children }) => (
-  <div className={size.split(" ").map(size => "col-" + size).join(" ")}>
+export const Col = ({ size, children, other }) => (
+  <div className={size.split(" ").map(size => "col-" + size).join(" ") + " " + other}>
     {children}
   </div>
 );

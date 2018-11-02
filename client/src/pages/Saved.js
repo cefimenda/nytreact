@@ -13,7 +13,7 @@ class Saved extends Component {
     };
     deleteBook = (id) => {
         console.log(id)
-        API.remove(id).then(()=>{
+        API.remove(id).then(() => {
             this.refresh()
         })
     };
@@ -27,7 +27,7 @@ class Saved extends Component {
             <div>
                 <Container>
                     <Row>
-                        <Col size="xs-12">
+                        <Col other="w-100 mt-3" size="xs-12">
                             {!this.state.books.length ? (
                                 <h1 className="text-center">No Books to Display</h1>
                             ) : (
