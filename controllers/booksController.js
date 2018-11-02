@@ -20,7 +20,6 @@ module.exports = {
       });
   },
   create: function (req, res) {
-    console.log(req.body)
     db.Book
       .create(req.body)
       .then(dbModel => res.json(dbModel))
@@ -36,7 +35,6 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   remove: function (req, res) {
-    console.log(`remove request id: ${req.params.id}`)
     db.Book
       .findById(req.params.id)
       .then(dbModel => dbModel.remove())

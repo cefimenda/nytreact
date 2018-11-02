@@ -12,7 +12,6 @@ class Saved extends Component {
         this.refresh()
     };
     deleteBook = (id) => {
-        console.log(id)
         API.remove(id).then(() => {
             this.refresh()
         })
@@ -33,7 +32,6 @@ class Saved extends Component {
                             ) : (
                                     <BookList>
                                         {this.state.books.map((book, i) => {
-                                            console.log(book)
                                             return (
                                                 <BookListItem
                                                     id={book._id}

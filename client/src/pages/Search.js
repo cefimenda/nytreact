@@ -26,10 +26,7 @@ class Search extends Component {
       event.preventDefault();
       API.getBooks(this.state.bookSearch)
         .then(res => {
-          console.log(res);
-          this.setState({ books: res.data.items });
-  
-          console.log(`CONFUSER:${res.data.items[0].searchInfo.textSnippet}`)
+          this.setState({ books: res.data.items });  
         })
         .catch(err => console.log(err));
     };

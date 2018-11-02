@@ -19,7 +19,6 @@ export const BookListItem = props => (
                 image: props.image
               })
             } else if (props.deleteBook) {
-              console.log(props.id)
               props.deleteBook(props.id)
             }
           }}>{props.saveBook ? ("Save Book") : ("Remove Book")}</button>
